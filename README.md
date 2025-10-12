@@ -12,6 +12,7 @@ If you're wondering how to approach business problems using DAX, think logically
 This project is aimed at helping you:
 
 - Practice **real-world DAX problems**
+- Understand how to **think logically** through DAX problems
 - Learn how to **break down business scenarios logically**
 - Understand **which DAX functions** to use and why
 - Improve your **Power BI data modeling and problem-solving** skills
