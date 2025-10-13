@@ -63,11 +63,6 @@ This section focuses on analyzing customer purchasing behavior using DAX in Powe
 
 ---
 
-## 💡 Note
-
-This repository is intended as a learning resource for those interested in improving their DAX skills using real-world customer analytics scenarios in Power BI.
-
----
 
 ## ✅ Requirements
 
@@ -77,6 +72,7 @@ This repository is intended as a learning resource for those interested in impro
 
 ## 📸 Sample Output
 
-![Sample Output](Screenshots/sample-output.png)
+<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/83dd82b3-a9f3-4c33-9467-8ee5dd2a8f24" />
+
 
 ---
