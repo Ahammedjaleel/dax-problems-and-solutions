@@ -57,9 +57,9 @@ This section focuses on analyzing customer purchasing behavior using DAX in Powe
 
 ## 📁 Files Included
 
-- **Question/** folder – Contains the detailed problem statements.
-- **Answer/** folder – Contains the Power BI file (`.pbix`) with the DAX solutions.
-- **Screenshots/** folder – Includes visuals/screenshots of the final result tables and measures for quick reference.
+- **Problem/** folder – Contains the detailed problem statements.
+- **Solution/** folder – Contains the Power BI file (`.pbix`) with the DAX solutions.
+
 
 ---
 
