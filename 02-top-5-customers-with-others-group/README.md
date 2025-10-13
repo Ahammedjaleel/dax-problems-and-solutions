@@ -13,61 +13,118 @@ The output should show **6 rows** in total:
 
 ## 🎯 Requirements
 
-- Use the **Sales** and **Customer** tables to calculate **Total Sales** per customer.
-- Sort the customers in **descending order of sales**.
+- Use the **Customers**, **Orders**, and **Products** tables.
+- Calculate **Total Sales** per customer.
 - Display only the **Top 5 customers** individually.
-- Combine all **other customers** into one group and display as `"Remaining Customers"`.
+- Combine all **other customers** into one group labeled `"Remaining Customers"`.
+- **Sort the results in descending order of total sales**,  
+  ➤ but ensure the **"Remaining Customers" row always appears last**,  
+  even if its total is higher than some of the top 5.
 
 ---
 
 ## 🧠 DAX Challenge
 
-Implement this logic using **three different DAX methods**:
+For learning purposes, this problem has been solved using **three different DAX approaches**:
 
-### 🔹 Method 1: Using `RANKX` and `SWITCH`
-- Rank customers by sales
-- Use `SWITCH(TRUE(), ...)` to assign names or group into "Remaining Customers"
+- **Two methods** using **calculated tables**, showcasing different ways to build the result table.
+- **One method** using a **calculated column** approach, demonstrating an alternative technique.
 
-### 🔹 Method 2: Using `TOPN` and `UNION`
-- Create two separate tables:
-  - Top 5 customers
-  - Group of remaining customers (aggregated)
-- Combine them using `UNION`
-
-### 🔹 Method 3: Using Calculated Table or Virtual Table Logic
-- Use `ADDCOLUMNS` or `SUMMARIZE` with custom logic to build a virtual table that includes the "Remaining Customers" row.
+Try implementing the logic yourself and compare your solutions with these methods to deepen your understanding of DAX.
 
 ---
 
 ## 🧩 Expected Output (Example)
 
-| Customer Name       | Total Sales |
-|---------------------|-------------|
-| Customer A          | 120,000     |
-| Customer B          | 110,000     |
-| Customer C          | 105,000     |
-| Customer D          | 102,000     |
-| Customer E          | 100,000     |
-| **Remaining Customers** | **300,000**   |
+<img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/4d412fde-e1c8-4262-bdc1-eaf1ea938037" />
 
 ---
 
 ## 📁 Dataset Tables
 
-- `Customer`
-- `Sales`
+- `Customers`
+- `Orders`
+- `Products`
 
-Ensure relationships are correctly set between `Customer[CustomerID]` and `Sales[CustomerID]`.
+Ensure relationships are correctly defined:
+
+- `Orders[CustomerID]` → `Customers[CustomerID]`
+- `Orders[ProductID]` → `Products[ProductID]`
 
 ---
 
 ## 💡 Goal
 
-This is a common real-world DAX use case for dashboards where stakeholders want to:
+This is a common DAX pattern used in Power BI dashboards where stakeholders want to:
 
-- Highlight the top performers
-- Combine the "long tail" customers under a single row
-- Keep visuals clean and informative
+- Highlight **top-performing customers**
+- Group the **long tail** into a single "Others" category
+- Maintain clean, focused visuals while retaining total values
 
 ---
+
+## 🧩 Bonus: DAX Logic Hint
+
+If you're stuck or want to validate your approach, you can refer to the DAX logic below as a guide.
+
+> 💡 Try solving the problem in your own Power BI file first.  
+> If needed, you can explore the DAX code provided below — or check the **solution Power BI file** included in the folder.
+
+---
+
+### Method 1: Calculated Table Using `TOPN`, `EXCEPT`, and `UNION`
+
+```dax
+Topcustomer1 = 
+VAR Nvalue = 5 
+VAR Allcustomer = 
+    ADDCOLUMNS(
+        VALUES(Customers[CustomerName]),
+        "Totalsale", [CustomerSale]
+    )
+
+VAR TopNcustomer = 
+    TOPN(Nvalue, Allcustomer, [Totalsale], DESC)
+
+VAR Remainingcustomer = 
+    EXCEPT(Allcustomer, TopNcustomer)
+
+VAR Remainingcustomersale =
+    ADDCOLUMNS(
+        DATATABLE("CustomerName", STRING, {{"Remaining Customers"}}),
+        "Totalsale", SUMX(Remainingcustomer, [Totalsale]),
+        "Ranking", Nvalue + 1
+    )
+
+VAR topnranking = 
+    ADDCOLUMNS(
+        TopNcustomer,
+        "Ranking", RANKX(TopNcustomer, [Totalsale], , DESC)
+    )
+
+VAR topnwithremaining = 
+    UNION(topnranking, Remainingcustomersale)
+
+RETURN
+    topnwithremaining
+```
+### Method 2: Calculated Table Using ADDCOLUMNS and RANKX with Conditional Grouping
+```dax
+Topcustomer2 = 
+VAR AllCustomer =
+    ADDCOLUMNS(
+        VALUES(Customers[CustomerName]),
+        "Customers", IF(RANKX(ALL(Customers), [CustomerSale], , DESC) <= 5, Customers[CustomerName], "RemainingCustomer"),
+        "Totalsale", [CustomerSale]
+    )
+
+VAR CustomerRanking = 
+    ADDCOLUMNS(
+        AllCustomer,
+        "Ranking", IF([Customers] = "RemainingCustomer", 6, RANKX(ALL(Customers), [CustomerSale], , DESC))
+    )
+
+RETURN
+    CustomerRanking
+```
 
