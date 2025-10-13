@@ -1,4 +1,4 @@
-# dax-problems-and-solutions
+
 # 🧠 DAX Practice Problems & Solutions
 
 Welcome to this Power BI DAX practice repository — designed for anyone who wants to **learn, practice, and master DAX** through real-world scenarios.
@@ -51,7 +51,7 @@ Each folder in this repository represents a unique DAX problem or case study.
 - Few problems also have a **YouTube video walkthrough** available on my channel
 ---
 
-
+## 🧩 Power BI DAX Challenges and Solutions ✅
 
 [**01 - Customer Purchase Analysis**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/01-customer-purchase-analysis)
 
