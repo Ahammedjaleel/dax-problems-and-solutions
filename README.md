@@ -59,22 +59,22 @@ Each folder in this repository represents a unique DAX problem or case study.
 
 > This section focuses on analyzing customer purchasing behavior using DAX in Power BI. Below are the key sub-questions explored in this analysis:
 
-1. **Customers with Only One Purchase**  
+1. ##### Customers with Only One Purchase
    What is the count of customers who made just one purchase?
 
-2. **Churned Customers**  
+2. ##### Churned Customers  
    How many customers did not return in the current year?
 
-3. **New Customers in the Current Year**  
+3. ##### New Customers in the Current Year 
    How many customers made their **first-ever** purchase in the current year?
 
-4. **Repeat Customers (Year-over-Year)**  
+4. ##### Repeat Customers (Year-over-Year)
    What is the number of customers who made purchases in **both** the current year and the previous year?
 
-5. **Average Products per Sale**  
+5. ##### Average Products per Sale
    What is the average number of products purchased per transaction?
 
-6. **Re-solve All of the Above Using `SUMMARIZECOLUMNS`**  
+6. ##### Re-solve All of the Above Using `SUMMARIZECOLUMNS` 
    Re-implement the above calculations using the `SUMMARIZECOLUMNS` function  
    (instead of `SUMMARIZE` or `ADDCOLUMNS`) to improve performance or clarity.
    
