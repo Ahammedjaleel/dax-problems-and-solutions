@@ -7,15 +7,16 @@ If you're wondering how to approach business problems using DAX, think logically
 
 ---
 
-## 🎯 Purpose of This Repository
+# 🎯 Purpose of This Repository
 
-This project is aimed at helping you:
+This project is designed to help you:
 
-- Practice **real-world DAX problems**
-- Understand how to **think logically** through DAX problems
-- Learn how to **break down business scenarios logically**
-- Understand **which DAX functions** to use and why
-- Improve your **Power BI data modeling and problem-solving** skills
+-  Practice solving real-world **DAX** problems  
+-  Develop **logical thinking skills** for approaching DAX challenges  
+-  Learn how to **break down business scenarios** methodically  
+-  Understand which **DAX** functions to use — and why  
+-  Enhance your **Power BI** data modeling and problem-solving abilities
+
 
 ---
 
@@ -47,48 +48,39 @@ Each folder in this repository represents a unique DAX problem or case study.
 - Scroll down to the list of problems below
 - **Click any problem title** — it will take you to that problem's folder
 - Open the folder's `README.md` for more details, and download the `.pbix` files to start practicing
-
+- Few problems also have a **YouTube video walkthrough** available on my channel
 ---
 
-## 🎥 YouTube Tutorials
 
-Most problems also have a **YouTube video walkthrough** available on my channel, where I explain:
 
-- How to understand the business requirement
-- Logical thinking behind the solution
-- Step-by-step DAX implementation
-
-➡️ [Watch the full playlist here](#) *(Insert your YouTube link here)*
-
----
-
-## ✨ Start Practicing Now
-
-Don't wait — start practicing DAX with real examples:
-
-- Open a problem folder
-- Read the scenario
-- Try solving it in the **Q... file**
-- Verify or learn from the solution in the **A... file**
-- Watch the YouTube video if you want a deeper walkthrough
-
----
-
-## 🤝 Need Help?
-
-If something is unclear or you're stuck:
-
-- Drop a comment on the corresponding YouTube video
-- Raise an issue or discussion here on GitHub
-- Feel free to [get in touch with me](#) *(Insert your contact/social link)*
-
----
-
-Happy Learning!  
-**– [Your Name or GitHub Username]**
+[**01 - Customer Purchase Analysis**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/01-customer-purchase-analysis)
 
 
 
+> This section focuses on analyzing customer purchasing behavior using DAX in Power BI. Below are the key sub-questions explored in this analysis:
+
+1. **Customers with Only One Purchase**  
+   What is the count of customers who made just one purchase?
+
+2. **Churned Customers**  
+   How many customers did not return in the current year?
+
+3. **New Customers in the Current Year**  
+   How many customers made their **first-ever** purchase in the current year?
+
+4. **Repeat Customers (Year-over-Year)**  
+   What is the number of customers who made purchases in **both** the current year and the previous year?
+
+5. **Average Products per Sale**  
+   What is the average number of products purchased per transaction?
+
+6. **Re-solve All of the Above Using `SUMMARIZECOLUMNS`**  
+   Re-implement the above calculations using the `SUMMARIZECOLUMNS` function  
+   (instead of `SUMMARIZE` or `ADDCOLUMNS`) to improve performance or clarity.
+   
+[**02 – Top 5 Customers with "Others" Group**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/02-top-5-customers-with-others-group)
+
+> Identify the Top 5 Customers by Total Sales and group all remaining customers into a single row labeled "Remaining Customers".
 
 
 
