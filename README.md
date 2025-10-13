@@ -53,7 +53,7 @@ Each folder in this repository represents a unique DAX problem or case study.
 
 ## 🧩 Power BI DAX Challenges and Solutions ✅
 
-[**01 - Customer Purchase Analysis**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/01-customer-purchase-analysis)
+[❓**01 - Customer Purchase Analysis**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/01-customer-purchase-analysis)
 
 
 
@@ -78,9 +78,50 @@ Each folder in this repository represents a unique DAX problem or case study.
    Re-implement the above calculations using the `SUMMARIZECOLUMNS` function  
    (instead of `SUMMARIZE` or `ADDCOLUMNS`) to improve performance or clarity.
    
-[**02 – Top 5 Customers with "Others" Group**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/02-top-5-customers-with-others-group)
+[❓**02 – Top 5 Customers with "Others" Group**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/02-top-5-customers-with-others-group)
 
 > Identify the Top 5 Customers by Total Sales and group all remaining customers into a single row labeled "Remaining Customers".
+
+
+
+
+
+[❓**03: Different Ways to Calculate Running Totals in Power BI Using DAX**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/dax-running-total-problems-solutions)
+
+> Explore multiple techniques to calculate **Running Totals** using DAX functions. Each sub-question challenges you to apply a different method or logic to achieve a cumulative sales calculation.
+
+##### 🔹 3.1: Calculate Running Total using `MAX`
+
+Use the `MAX` function within a `FILTER` context to accumulate sales up to the current date.
+
+---
+
+##### 🔹 3.2: Calculate Running Total using `ISONORAFTER`
+
+Use the `ISONORAFTER` function to compare dates in descending order, useful for ordering and cumulative logic.
+
+---
+
+##### 🔹 3.3: Calculate Running Total for the Last 3 Months
+
+Build a **rolling total** for the last three months from the current date using `DATESBETWEEN` and `EOMONTH`.
+
+---
+
+##### 🔹 3.4: Calculate Year-to-Date (YTD) Running Total using `MAX`
+
+Limit your cumulative total to only include dates **within the same year**, using a `MAX`-based approach.
+
+---
+
+##### 🔹 3.5: Calculate Year-to-Date (YTD) using `TOTALYTD`
+
+Use Power BI’s built-in `TOTALYTD` function to compute running totals from the start of the year to the current date.
+
+---
+
+
+
 
 
 
