@@ -27,17 +27,16 @@ Each folder in this repository represents a unique DAX problem or case study.
 ### 🧩 Each folder includes:
 
 - A `README.md` explaining the problem in detail
-- 📁 **Two Power BI files**:
-  
-  1. **Q... (.pbix)** — Problem Only file  
-     - Contains only the problem statement  
-     - Has a **second report page** where you can build your own solution  
-     - Use this file if you want to solve the problem yourself without seeing the answer upfront
+- 📁 **One Power BI files**:
+  ## Power BI (.pbix) — Problem + Solution File
 
-  2. **A... (.pbix)** — Solution Explained file  
-     - Contains the complete solution  
-     - Includes **line-by-line DAX comments and explanations** where necessary  
-     - Ideal for learning how each part of the solution works
+- Includes the full **problem statement**
+- Provides a dedicated page for you to **build your own solution**
+- The solution is available in **two formats**:
+  1. **Solution Only** – for quick reference or validation  
+  2. **Solution with Explanations** – includes detailed DAX comments and step-by-step breakdowns
+- Ideal for both **self-practice** and **in-depth learning**
+
 
 - 📸 Screenshots showing expected outputs (optional but included in many folders)
 
