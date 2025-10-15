@@ -10,7 +10,6 @@ Ideal for Power BI learners, data analysts, or interview candidates who want to 
 
 | File | Description |
 |------|-------------|
-| `Running_Total_Problems.pbix` | Power BI file containing the **running total challenges**. No DAX solutions included — ideal for self-practice. |
 | `Running_Total_Solutions.pbix` | Power BI file with **fully implemented DAX solutions** for each problem. Use this to validate your approach or learn new techniques. |
 | `README.md` | This documentation, including problem descriptions and all DAX solutions. |
 
