@@ -1,5 +1,5 @@
 
-# 🧠 DAX Practice Problems & Solutions
+#  DAX Practice Problems & Solutions
 
 Welcome to this Power BI DAX practice repository — designed for anyone who wants to **learn, practice, and master DAX** through real-world scenarios.
 
@@ -7,7 +7,7 @@ If you're wondering how to approach business problems using DAX, think logically
 
 ---
 
-# 🎯 Purpose of This Repository
+###  Purpose of This Repository
 
 This project is designed to help you:
 
@@ -20,15 +20,14 @@ This project is designed to help you:
 
 ---
 
-## 📂 What's Inside
+### 📂 What's Inside
 
 Each folder in this repository represents a unique DAX problem or case study.
 
 ### 🧩 Each folder includes:
 
 - A `README.md` explaining the problem in detail
-- 📁 **One Power BI files**:
-  ## Power BI (.pbix) — Problem + Solution File
+- ### 📁Power BI (.pbix) — Problem + Solution File
 
 - Includes the full **problem statement**
 - Provides a dedicated page for you to **build your own solution**
@@ -42,7 +41,7 @@ Each folder in this repository represents a unique DAX problem or case study.
 
 ---
 
-## 🔗 How to Navigate
+### 🔗 How to Navigate
 
 - Scroll down to the list of problems below
 - **Click any problem title** — it will take you to that problem's folder
@@ -50,34 +49,37 @@ Each folder in this repository represents a unique DAX problem or case study.
 - Few problems also have a **YouTube video walkthrough** available on my channel
 ---
 
-## 🧩 Power BI DAX Challenges and Solutions ✅
+##  Power BI DAX Challenges and Solutions ✅
 
-[❓**01 - Customer Purchase Analysis**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/01-customer-purchase-analysis)
+[❓**01: Customer Purchase Analysis**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/01-customer-purchase-analysis)
 
 
 
 > This section focuses on analyzing customer purchasing behavior using DAX in Power BI. Below are the key sub-questions explored in this analysis:
 
-1. ##### Customers with Only One Purchase
-   What is the count of customers who made just one purchase?
+### 1. Customer Analysis Challenges
 
-2. ##### Churned Customers  
-   How many customers did not return in the current year?
+#### 1.1 Customers with Only One Purchase  
+What is the count of customers who made just one purchase?
 
-3. ##### New Customers in the Current Year 
-   How many customers made their **first-ever** purchase in the current year?
+#### 1.2 Churned Customers  
+How many customers did not return in the current year?
 
-4. ##### Repeat Customers (Year-over-Year)
-   What is the number of customers who made purchases in **both** the current year and the previous year?
+#### 1.3 New Customers in the Current Year  
+How many customers made their **first-ever** purchase in the current year?
 
-5. ##### Average Products per Sale
-   What is the average number of products purchased per transaction?
+#### 1.4 Repeat Customers (Year-over-Year)  
+What is the number of customers who made purchases in **both** the current year and the previous year?
 
-6. ##### Re-solve All of the Above Using `SUMMARIZECOLUMNS` 
-   Re-implement the above calculations using the `SUMMARIZECOLUMNS` function  
-   (instead of `SUMMARIZE` or `ADDCOLUMNS`) to improve performance or clarity.
+#### 1.5 Average Products per Sale  
+What is the average number of products purchased per transaction?
+
+#### 1.6 Re-solve All of the Above Using `SUMMARIZECOLUMNS`  
+Re-implement the above calculations using the `SUMMARIZECOLUMNS` function  
+(instead of `SUMMARIZE` or `ADDCOLUMNS`) to improve performance or clarity.
+
    
-[❓**02 – Top 5 Customers with "Others" Group**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/02-top-5-customers-with-others-group)
+[❓**02: Top 5 Customers with "Others" Group**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/02-top-5-customers-with-others-group)
 
 > Identify the Top 5 Customers by Total Sales and group all remaining customers into a single row labeled "Remaining Customers".
 
@@ -89,35 +91,47 @@ Each folder in this repository represents a unique DAX problem or case study.
 
 > Explore multiple techniques to calculate **Running Totals** using DAX functions. Each sub-question challenges you to apply a different method or logic to achieve a cumulative sales calculation.
 
-##### 🔹 3.1: Calculate Running Total using `MAX`
+#####  3.1: Calculate Running Total using `MAX`
 
 Use the `MAX` function within a `FILTER` context to accumulate sales up to the current date.
 
 ---
 
-##### 🔹 3.2: Calculate Running Total using `ISONORAFTER`
+#####  3.2: Calculate Running Total using `ISONORAFTER`
 
 Use the `ISONORAFTER` function to compare dates in descending order, useful for ordering and cumulative logic.
 
 ---
 
-##### 🔹 3.3: Calculate Running Total for the Last 3 Months
+#####  3.3: Calculate Running Total for the Last 3 Months
 
 Build a **rolling total** for the last three months from the current date using `DATESBETWEEN` and `EOMONTH`.
 
 ---
 
-##### 🔹 3.4: Calculate Year-to-Date (YTD) Running Total using `MAX`
+#####  3.4: Calculate Year-to-Date (YTD) Running Total using `MAX`
 
 Limit your cumulative total to only include dates **within the same year**, using a `MAX`-based approach.
 
 ---
 
-##### 🔹 3.5: Calculate Year-to-Date (YTD) using `TOTALYTD`
+#####  3.5: Calculate Year-to-Date (YTD) using `TOTALYTD`
 
 Use Power BI’s built-in `TOTALYTD` function to compute running totals from the start of the year to the current date.
 
 ---
+
+[❓**04: Calculate a running total using a non-date field (e.g., Customer or Category).**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/02-top-5-customers-with-others-group)
+
+>This challenge focuses on creating a running (cumulative) total **without using a date column**.
+
+Instead, you'll calculate the running total based on:
+
+- **Customer** → ordered by **sales rank**
+- **Category** → ordered by **Category ID**
+
+It’s useful when your data doesn't have a time component but still follows a logical or business-defined order.
+
 
 
 
