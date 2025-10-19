@@ -18,6 +18,32 @@ A **running total** (also called a **cumulative total**) adds up values **sequen
 A running total needs a consistent **order**, but **not necessarily a date**.
 
 ---
+## 📁 Dataset Tables
+
+- `Calendar`  
+- `Customers`  
+- `Orders`  
+- `Products`  
+- `Category`  
+
+### 🔗 Relationships
+
+- `Orders[CustomerID]` → `Customers[CustomerID]`  
+- `Orders[ProductID]` → `Products[ProductID]`  
+- `Orders[OrderDate]` → `Calendar[Date]`  
+- `Products[CategoryID]` → `Category[CategoryID]`  
+
+---
+
+## Data Model Diagram
+
+
+<img width="601" height="317" alt="image" src="https://github.com/user-attachments/assets/488fac11-1190-42cb-aa06-8fab5541b092" />
+
+
+This visual represents the **data model** used in this case study. It illustrates the relationships between the key tables: **Calendar**, **Customers**, **Orders**, **Products**, and **Category**.
+
+The **Orders** table serves as the central fact table, connected to its related dimension tables. Additionally, the **Products** table is linked to the **Category** table, allowing product-level insights to be analyzed at a broader category level. This extended star schema supports rich, multi-dimensional analysis using DAX.
 
 ---
 
@@ -110,3 +136,9 @@ RETURN
 - SELECTEDVALUE pulls the current CategoryID in row context.
 
 - FILTER + CALCULATE adds up sales from all categories with IDs less than or equal to the current one.
+
+---
+#### Let's Connect
+[![github](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ahammedjaleel)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahammed-jaleel-33772b5b/)
+
