@@ -11,7 +11,7 @@ The output should show **6 rows** in total:
 
 ---
 
-## 🎯 Requirements
+##  Requirements
 
 - Use the **Customers**, **Orders**, and **Products** tables.
 - Calculate **Total Sales** per customer.
@@ -23,7 +23,7 @@ The output should show **6 rows** in total:
 
 ---
 
-## 🧠 DAX Challenge
+##  DAX Challenge
 
 For learning purposes, this problem has been solved using **three different DAX approaches**:
 
@@ -50,6 +50,20 @@ Ensure relationships are correctly defined:
 
 - `Orders[CustomerID]` → `Customers[CustomerID]`
 - `Orders[ProductID]` → `Products[ProductID]`
+
+##  Data Model Diagram
+<img width="512" height="480" alt="image" src="https://github.com/user-attachments/assets/49dd5d2d-a051-435b-b0fc-61d174ca7c89" />
+
+This visual represents the Power BI data model used in this case study. It illustrates the relationships between the key tables: Customers, Orders, and Products, where the Orders table acts as the central fact table linked to Customers and Products through defined relationships.
+
+
+## 📁 Files Included
+
+01-1-6 Question_ANSWER_Explanation_.pbix – This Power BI file contains six DAX-based business questions along with their solutions and explanations. 
+
+- ✅ **Solution**: Contains two versions for each problem:
+  - One with just the **final DAX answer**.
+  - Another with **step-by-step explanation** .
 
 ---
 
@@ -127,4 +141,6 @@ VAR CustomerRanking =
 RETURN
     CustomerRanking
 ```
-
+#### Let's Connect
+[![github](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ahammedjaleel)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahammed-jaleel-33772b5b/)
