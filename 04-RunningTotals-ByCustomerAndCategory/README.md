@@ -58,7 +58,6 @@ Use these to verify your own implementation.
 
 The Power BI file `04-Running Total-13-14 Question_ANSWER_Explanation_.pbix` includes:
 
--  **Problem-only page**: For self-practice.
 - ✅ **Solution**: Contains two versions for each problem:
   - One with just the **final DAX answer**.
   - Another with **step-by-step explanation** .
