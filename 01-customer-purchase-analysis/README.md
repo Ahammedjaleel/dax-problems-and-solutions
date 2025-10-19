@@ -73,6 +73,9 @@ This section focuses on analyzing customer purchasing behavior using DAX in Powe
 
 01-1-6 Question_ANSWER_Explanation_.pbix – This Power BI file contains six DAX-based business questions along with their solutions and explanations. 
 
+- ✅ **Solution**: Contains two versions for each problem:
+  - One with just the **final DAX answer**.
+  - Another with **step-by-step explanation** .
 
 
 ---
