@@ -93,3 +93,118 @@ This section focuses on analyzing customer purchasing behavior using DAX in Powe
 
 
 ---
+## ⚠️Reveal Zone: Answers Below
+
+🚫 Spoiler Warning
+You're about to enter the solution section.
+These DAX answers are laid out in full — make sure you've given the challenge a solid try before proceeding!
+
+---
+
+
+1. **Customers with Only One Purchase**  
+   > What is the count of customers who made just one purchase?
+
+```dax
+1E-SUMMARIZE-Customer only purchased one = 
+COUNTROWS (
+    FILTER (
+        ADDCOLUMNS (
+            SUMMARIZE ( Sales, Sales[CustomerKey] ),
+            "No of Purchase", CALCULATE ( DISTINCTCOUNT ( Sales[SalesOrderNumber] ) )
+        ),
+        [No of Purchase] = 1
+    )
+)
+
+
+```
+2. **Churned Customers**  
+   > How many customers did not return in the current year?
+   
+```dax
+ 
+2E SUMMARIZE-Lost Customer(This year) 2 = 
+COUNTROWS(
+    FILTER(
+        ADDCOLUMNS(
+            SUMMARIZE(Sales, Sales[CustomerKey]),
+            "Max Order Date",
+            FIRSTNONBLANKVALUE(
+                Sales[CustomerKey],
+                MAX(Sales[OrderDate])
+            )
+        ),
+        [Max Order Date] < DATE(2022, 1, 1)
+    )
+)
+```
+
+
+3. **New Customers in the Current Year**  
+   > How many customers made their **first-ever** purchase in the current year?
+
+```dax
+3E SUMMARIZE-New customer in 2022 = 
+COUNTROWS (
+    FILTER (
+        ADDCOLUMNS(
+            SUMMARIZE(Sales, Sales[CustomerKey]),
+            "First Purchase Date", 
+            CALCULATE(MIN ( Sales[OrderDate] ))
+        ),
+        [First Purchase Date] >= DATE ( 2022, 1, 1 )
+    )
+)
+
+
+```
+4. **Repeat Customers (Year-over-Year)**  
+   > What is the number of customers who made purchases in **both** the current year and the previous year?
+
+
+```dax
+
+4E SUMMARIZE-Repeat Customer 2 = 
+COUNTROWS (
+    FILTER (
+        ADDCOLUMNS(
+            SUMMARIZE(Sales, Sales[CustomerKey]),
+            "First Purchase", 
+            CALCULATE(MIN ( Sales[OrderDate] )),
+            "Last Purchase", 
+            CALCULATE(MAX ( Sales[OrderDate] ))
+        ),
+        [First Purchase] < DATE ( 2022, 1, 1 )
+        && [Last Purchase] >= DATE ( 2022, 1, 1 )
+    )
+)
+
+```
+5. **Average Products per Sale**  
+   > What is the average number of products purchased per transaction?
+
+
+```dax
+5E SUMMARIZE-Average Product Per Sale 2 = 
+AVERAGEX (
+    ADDCOLUMNS(
+        SUMMARIZE(Sales, Sales[SalesOrderNumber]),
+        "No Of Product", 
+        CALCULATE(DISTINCTCOUNT(Sales[ProductKey]))
+    ),
+    [No Of Product]
+)
+
+
+```
+
+
+
+
+
+
+
+
+
+
