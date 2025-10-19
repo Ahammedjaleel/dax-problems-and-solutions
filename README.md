@@ -121,7 +121,7 @@ Use Power BI’s built-in `TOTALYTD` function to compute running totals from the
 
 ---
 
-[❓**04: Calculate a running total using a non-date field (e.g., Customer or Category).**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/04-RunningTotals-ByCustomerAndCategory)
+[❓**04: Calculate a running total using a non-date field (e.g., Customer or Category).**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/04-customer-category-running-totals-analysis)
 
 >This challenge focuses on creating a running (cumulative) total **without using a date column**.
 
