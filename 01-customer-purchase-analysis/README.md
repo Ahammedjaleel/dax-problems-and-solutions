@@ -8,7 +8,7 @@ This repository contains a Power BI case study focused on solving key customer a
 
 ---
 
-## 📊 Dataset Overview
+##  Dataset Overview
 
 The dataset consists of the following tables:
 
@@ -20,12 +20,26 @@ The dataset consists of the following tables:
 These tables are related appropriately in the Power BI data model to perform sales and customer analysis.
 
 ---
+## Power BI Data Model Diagram
+<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/42c34238-a33a-4263-b420-246adbd50b2d" />
 
-## 🧠 DAX Problems to Solve
+
+This visual represents the Power BI data model used in this case study. It illustrates the relationships between the key tables: Customer, Product, Region, and Sales.
+
+➡️ The Sales table serves as the central fact table, containing transaction-level data.
+
+➡️ It connects to the Customer, Product, and Region tables via one-to-many relationships, enabling efficient filtering and aggregation.
+
+➡️ This star schema design supports optimal DAX performance and simplifies complex analytical calculations.
+
+➡️ The well-structured data model ensures accurate and efficient customer purchase analysis using DAX measures and calculated tables.
+
+---
+##  DAX Problems to Solve
 
 Using **`ADDCOLUMNS`** and **`SUMMARIZE`**, solve the following:
 
-## 01 - Customer Purchase Analysis
+## ❓01 - Customer Purchase Analysis
 
 This section focuses on analyzing customer purchasing behavior using DAX in Power BI. Below are the key sub-questions explored in this analysis:
 
@@ -57,8 +71,8 @@ This section focuses on analyzing customer purchasing behavior using DAX in Powe
 
 ## 📁 Files Included
 
-- **Problem/** folder – Contains the detailed problem statements.
-- **Solution/** folder – Contains the Power BI file (`.pbix`) with the DAX solutions.
+01-1-6 Question_ANSWER_Explanation_.pbix – This Power BI file contains six DAX-based business questions along with their solutions and explanations. 
+
 
 
 ---
