@@ -87,7 +87,7 @@ Re-implement the above calculations using the `SUMMARIZECOLUMNS` function
 
 
 
-[❓**03: Different Ways to Calculate Running Totals in Power BI Using DAX**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/dax-running-total-problems-solutions)
+[❓**03: Different Ways to Calculate Running Totals in Power BI Using DAX**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/03-running-total-problems-solutions)
 
 > Explore multiple techniques to calculate **Running Totals** using DAX functions. Each sub-question challenges you to apply a different method or logic to achieve a cumulative sales calculation.
 
