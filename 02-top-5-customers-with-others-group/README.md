@@ -59,7 +59,7 @@ This visual represents the Power BI data model used in this case study. It illus
 
 ## 📁 Files Included
 
-01-1-6 Question_ANSWER_Explanation_.pbix – This Power BI file contains six DAX-based business questions along with their solutions and explanations. 
+02-Top5-customer-7 Question_ANSWER_Explanation_.pbix – This Power BI file contains  DAX-based business questions along with their solutions and explanations. 
 
 - ✅ **Solution**: Contains two versions for each problem:
   - One with just the **final DAX answer**.
