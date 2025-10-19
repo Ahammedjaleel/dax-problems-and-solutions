@@ -1,21 +1,14 @@
-# 📊 Power BI DAX Running Totals — Practice Problems & Solutions
+#  Power BI DAX Running Totals — Practice Problems & Solutions
 
 This repository provides a hands-on learning experience to master **DAX running total calculations** in Power BI. It includes **interview-style DAX challenges** and their solutions using different DAX functions and logic.
 
 Ideal for Power BI learners, data analysts, or interview candidates who want to understand and implement **Running Totals** in multiple ways.
 
----
 
-## 📁 Files Included
-
-| File | Description |
-|------|-------------|
-| `Running_Total_Solutions.pbix` | Power BI file with **fully implemented DAX solutions** for each problem. Use this to validate your approach or learn new techniques. |
-| `README.md` | This documentation, including problem descriptions and all DAX solutions. |
 
 ---
 
-## 🎯 DAX Running Total Problems
+##  DAX Running Total Problems
 
 Below are the challenges you'll be solving. All problems are based on a calendar table and a basic measure `[Total Sales]`.
 
@@ -50,8 +43,29 @@ Use the built-in `TOTALYTD` function to calculate the cumulative total from the 
 <img width="800" height="450" alt="image" src="https://github.com/user-attachments/assets/16ae7d95-1a5c-4224-9f79-a0f6d187f19c" />
 
 ---
+## 📁 Dataset Tables
 
-## 🧠 Key Learning Points
+- `Calendar`  
+- `Customers`  
+- `Orders`  
+- `Products`  
+
+### 🔗 Relationships
+
+- `Orders[CustomerID]` → `Customers[CustomerID]`  
+- `Orders[ProductID]` → `Products[ProductID]`  
+- `Orders[OrderDate]` → `Calendar[Date]`  
+
+---
+
+##  Data Model Diagram
+
+<img width="546" height="482" alt="image" src="https://github.com/user-attachments/assets/0477d289-3908-4db5-9516-2b76549694ee" />
+
+
+This visual represents the **Power BI data model** used in this case study. It illustrates the relationships between the key tables: **Calendar**, **Customers**, **Orders**, and **Products**, where the **Orders** table acts as the central fact table. It connects to the related dimension tables through one-to-many relationships, enabling efficient **time-based**, **customer-level**, and **product-level** analysis using DAX.
+
+##  Key Learning Points
 
 - Use of different DAX functions (`MAX`, `ISONORAFTER`, `DATESBETWEEN`, `TOTALYTD`) to compute running totals  
 - Understanding context transition in `CALCULATE` and `FILTER`  
@@ -60,6 +74,15 @@ Use the built-in `TOTALYTD` function to calculate the cumulative total from the 
 
 ---
 
+
+## 📁 Files Included
+
+| File | Description |
+|------|-------------|
+| `03-RunningTotal-8-12 Question_ANSWER_Explanation_.pbix` | Power BI file with **fully implemented DAX solutions** for each problem. Use this to validate your approach or learn new techniques. |
+| `README.md` | This documentation, including problem descriptions and all DAX solutions. |
+
+---
 ## 🛠 Requirements
 
 - Power BI Desktop (recommended: latest version)  
@@ -74,9 +97,14 @@ Use the built-in `TOTALYTD` function to calculate the cumulative total from the 
 2. Open `Running_Total_Problems.pbix` and try solving the problems yourself.  
 3. Open `Running_Total_Solutions.pbix` to check and study the official solutions.  
 4. Refer to this `README.md` for all DAX code and explanations.  
-5. Explore the `screenshots/` folder to see expected outputs for each solution.  
+5. Explore the `screenshots/` folder to see expected outputs for each solution.
+---
+## 🚨 Warning: Solutions Ahead
 
-## ✅ DAX Solutions
+> ⚠️ **Spoiler Alert**  
+> The following section contains the full DAX solutions.  
+> Only continue if you've already attempted to solve the problems yourself.  
+### ✅ DAX Solutions
 
 Here are the complete DAX solutions for each of the above problems.
 
@@ -124,3 +152,6 @@ Answer12_Explanation-RT_YTD = TOTALYTD([Total sales], 'Calendar'[Date])  // This
 
 ```
 
+#### Let's Connect
+[![github](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ahammedjaleel)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahammed-jaleel-33772b5b/)
