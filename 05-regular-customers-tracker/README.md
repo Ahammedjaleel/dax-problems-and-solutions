@@ -55,7 +55,7 @@ Create a DAX measure that lists the **names and IDs** of customers who made purc
 
 ---
 ## 📷 Output Screenshots
-<img width="813" height="337" alt="image" src="https://github.com/user-attachments/assets/8b57c330-44c3-4477-b83a-d0be39cae388" />
+<img width="813" height="437" alt="image" src="https://github.com/user-attachments/assets/8b57c330-44c3-4477-b83a-d0be39cae388" />
 
 
 ---
