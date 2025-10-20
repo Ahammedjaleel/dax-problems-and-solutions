@@ -147,7 +147,13 @@ It’s useful when your data doesn't have a time component but still follows a l
 - Identify products with consistently high demand by analyzing repeat sales across the last 3 weeks using Power BI and DAX.
 
 
+---
+[❓**07: High-Demand Product Analysis (3-Week Consistency)**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/06-high-demand-products-analysis)
 
+- Identify products with consistently high demand by analyzing repeat sales across the last 3 weeks using Power BI and DAX.
+
+  
+----
 
 
 
