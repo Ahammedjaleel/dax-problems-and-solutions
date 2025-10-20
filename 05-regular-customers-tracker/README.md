@@ -142,7 +142,7 @@ RETURN
 ```
 ## 📁 Power BI File
 
-The Power BI file 05- 15-16 Question_ANSWER_Explanation_.pbix includes:
+The Power BI file 05-Identifying Loyal Customers 15-16 Question_ANSWER_Explanation_.pbix includes:
 
 ✅ Both final solutions,Step-by-step logic, Output visuals
 
