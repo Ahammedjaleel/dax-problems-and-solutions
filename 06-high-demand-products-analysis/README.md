@@ -1,4 +1,4 @@
-#  Power BI DAX: High-Demand Products Over the Last 3 Weeks
+#  06- High-Demand Products Over the Last 3 Weeks
 
 This case study shows how to identify **high-demand products** that were ordered consistently over the **last 3 consecutive weeks** using DAX.
 
