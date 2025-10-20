@@ -134,7 +134,7 @@ It’s useful when your data doesn't have a time component but still follows a l
 
 ---
 
-[❓**05: Identifying Loyal Customers Over Consecutive Months **](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/05-regular-customers-tracker)
+[❓**05: Identifying Loyal Customers Over Consecutive Months**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/05-regular-customers-tracker)
 
 - DAX-based solution to track regular customer activity over consecutive months.
 - Analyze repeat buying behavior by detecting consistent monthly purchases with DAX.
