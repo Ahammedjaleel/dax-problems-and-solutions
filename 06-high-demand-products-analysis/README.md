@@ -69,7 +69,7 @@ These are products with **continuous weekly demand**, indicating consistent popu
 ---
 #### 📁 Power BI File
 
-The Power BI file 06-HighDemandProducts-17-18.pbix includes:
+The Power BI file 06-High-Demand Product Analysis-17-18 Question_ANSWER_Explanation_.pbix includes:
 
 ✅ Final answers, Step-by-step logic,Visuals to validate output
 
