@@ -11,6 +11,10 @@ It's useful for demand forecasting, product lifecycle analysis, and inventory op
 A **High-Demand Product** is defined here as a product that was **ordered in all of the past 3 weeks**, including the current one (based on filter context).
 
 ---
+##  Data Model Diagram
+<img width="636" height="560" alt="image" src="https://github.com/user-attachments/assets/c8234c66-372b-4960-a938-1142b2093013" />
+
+
 
 ## 📁 Dataset Tables
 
@@ -27,7 +31,7 @@ A **High-Demand Product** is defined here as a product that was **ordered in all
 
 ---
 
-## 💡 Problem Statements
+## Problem Statements
 
 >  Try solving the following DAX problems using the dataset before viewing the solutions.
 
@@ -49,7 +53,12 @@ These are products with **continuous weekly demand**, indicating consistent popu
 
 
 ---
+### 📷 Output Screenshots
+<img width="688" height="492" alt="image" src="https://github.com/user-attachments/assets/54f9c5d3-df9e-49ac-9861-213596210971" />
 
+
+
+---
 ## 🔍 Heads-Up: Answers Incoming  
 
 > 💡 **Think First!**  
