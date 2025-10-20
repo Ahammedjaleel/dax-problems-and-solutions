@@ -1,4 +1,4 @@
-# 📈 Power BI: Rolling Average Sales Analysis
+# 07- Rolling Average Sales Analysis
 
 Calculate rolling average sales over time using DAX in Power BI — including yearly and 6-month rolling windows — to identify sales trends and smooth out seasonal fluctuations.
 
@@ -21,7 +21,7 @@ Calculate rolling average sales over time using DAX in Power BI — including ye
 
 ---
 
-## 🧠 What is a Rolling Average?
+##  What is a Rolling Average?
 
 A **rolling average** (also called a **moving average**) is a technique used to smooth out fluctuations in time-series data by calculating the average value over a specific number of past periods (like months or years).
 
@@ -31,8 +31,19 @@ This approach:
 - Helps with forecasting and planning
 
 ---
+## 📊 Output Screenshots
 
-## 💡 Problem Statements
+---
+
+## 📁 Data Model Diagram
+
+
+
+
+---
+
+
+##  Problem Statements
 
 > Solve these using DAX to better understand rolling window calculations.
 
