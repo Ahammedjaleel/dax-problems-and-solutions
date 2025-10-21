@@ -1,4 +1,4 @@
-#  Power BI DAX Running Totals — Practice Problems & Solutions
+#  03- Running Totals — Practice Problems & Solutions
 
 This repository provides a hands-on learning experience to master **DAX running total calculations** in Power BI. It includes **interview-style DAX challenges** and their solutions using different DAX functions and logic.
 
