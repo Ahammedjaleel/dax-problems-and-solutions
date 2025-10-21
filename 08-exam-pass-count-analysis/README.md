@@ -42,11 +42,27 @@ This DAX challenge explores how to **count the number of passed subjects per stu
 
 ---
 
+
+
+## 📁 Files Included
+
+| File | Description |
+|------|-------------|
+| `08 - exam-pass-count-analysis-21 Question_ANSWER_Explanation_.pbix` | Power BI file with **fully implemented DAX solutions** for each problem. Use this to validate your approach or learn new techniques. |
+| `README.md` | This documentation, including problem descriptions and all DAX solutions. |
+
+---
+
+
 ## 💡 Problem Statement
 
 > Solve the following using DAX to improve your understanding of row context, filtering, and conditional logic.
 
 ---
+
+
+
+
 
 ### 🔹 Problem 21: Count of Subjects Passed by Each Student
 
