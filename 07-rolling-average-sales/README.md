@@ -74,7 +74,7 @@ This is useful to monitor recent performance without daily/monthly fluctuations.
 
 | File | Description |
 |------|-------------|
-| `03-RunningTotal-8-12 Question_ANSWER_Explanation_.pbix` | Power BI file with **fully implemented DAX solutions** for each problem. Use this to validate your approach or learn new techniques. |
+| `07- Rolling Average Sales Analysis-19-20 Question_ANSWER_Explanation_.pbix` | Power BI file with **fully implemented DAX solutions** for each problem. Use this to validate your approach or learn new techniques. |
 | `README.md` | This documentation, including problem descriptions and all DAX solutions. |
 
 
