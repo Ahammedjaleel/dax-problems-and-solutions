@@ -1,4 +1,4 @@
-# Power BI DAX: Running Total by Non-Date Fields
+# 04: Running Total by Non-Date Fields
 
 This repository contains practical DAX examples for calculating **running totals based on non-date fields**, such as **Customer Name** or **Category ID**.
 
