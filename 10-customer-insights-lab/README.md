@@ -70,9 +70,10 @@ Retention rate is a key customer success metric. This measure helps identify how
 This KPI shows how much each category contributes to total revenue. It helps in identifying key drivers and underperformers within the product portfolio.
 
 ---
-
+### ⭐⭐Bonus Problem – How can we calculate the number of repeat customers using different DAX approaches?
 ## Output Screenshots
-<img width="1260" height="717" alt="image" src="https://github.com/user-attachments/assets/7c5ca8f3-e09f-4f79-a866-15823708be23" />
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/7c5ca8f3-e09f-4f79-a866-15823708be23" />
 
 <img width="771" height="681" alt="image" src="https://github.com/user-attachments/assets/b507e2eb-139f-4a42-bea9-5c342ca0bfc7" />
 
@@ -181,3 +182,85 @@ DIVIDE(
 
 
 ```
+
+
+### Bonus Problem – Repeat Customer Calculation (3 Methods)
+## 🔁  – Repeat Customer Calculation Methods
+
+We want to calculate how many **repeat customers** exist — i.e., customers who have made **more than one purchase**.
+
+---
+
+###  Method 1: Using `SUMMARIZE`
+
+```dax
+Repeat Customer = 
+CALCULATE(
+    DISTINCTCOUNT(Sales[CustomerKey]),
+    FILTER(
+        SUMMARIZE(Sales, Sales[CustomerKey], "CustomerCount", COUNTROWS(Sales)),
+        [CustomerCount] > 1
+    )
+)
+
+```
+#### Explanation:
+
+SUMMARIZE creates a virtual table summarizing the number of sales (CustomerCount) per customer.
+
+We filter this table to keep only customers with more than 1 purchase.
+
+Then, DISTINCTCOUNT(Sales[CustomerKey]) counts how many such customers exist in the original data context.
+
+### Method 2: Using EARLIER
+```dax
+
+Repeat Customers = 
+CALCULATE(
+    DISTINCTCOUNT(Sales[CustomerKey]),
+    FILTER(
+        Sales,
+        COUNTROWS(
+            FILTER(Sales, Sales[CustomerKey] = EARLIER(Sales[CustomerKey]))
+        ) > 1
+    )
+)
+
+
+
+
+```
+#### Explanation:
+
+For each row in the Sales table, we use EARLIER to refer to the outer row context.
+
+Then, we filter for customers whose total purchases (COUNTROWS) are greater than 1.
+
+Finally, DISTINCTCOUNT returns the number of such unique customers.
+### Method 3: Using VAR (Modern, Readable)
+```dax
+
+Variable Repeat Customer = 
+CALCULATE(
+    DISTINCTCOUNT(Sales[CustomerKey]),
+    FILTER(
+        Sales,
+        VAR CurrentCustomerKey = Sales[CustomerKey]
+        RETURN
+            COUNTROWS(
+                FILTER(Sales, Sales[CustomerKey] = CurrentCustomerKey)
+            ) > 1
+    )
+)
+
+
+
+
+```
+#### Explanation:
+
+Uses a VAR to store the current customer key, making the logic cleaner and easier to follow.
+
+We filter for customers who appear more than once in the dataset.
+
+Then, DISTINCTCOUNT returns the total number of unique repeat customers.
