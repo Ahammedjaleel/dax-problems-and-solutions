@@ -107,7 +107,7 @@ RETURN
     IF(CustomerCount > 0, TotalSales / CustomerCount, BLANK())
 
 ```
-🔹 Solution 2 – Year-over-Year Sales Growth (%)
+### 🔹 Solution 2 – Year-over-Year Sales Growth (%)
 ```dax
 
 YoY Sales Growth (%) = 
@@ -123,7 +123,7 @@ RETURN
 
 
 ```
-🔹 Solution 3 – Average Days to Ship
+### 🔹 Solution 3 – Average Days to Ship
 ```dax
 Average Days to Ship = 
 VAR DaystoShip = 
@@ -138,7 +138,7 @@ AVERAGEX(
 
 
 ```
-🔹 Solution 4 – Customer Segmentation by Sales
+### 🔹 Solution 4 – Customer Segmentation by Sales
 ```dax
 Customer Segment = 
 SWITCH(
@@ -151,7 +151,7 @@ SWITCH(
 
 
 ```
-🔹 Solution 5 – Customer Retention Rate
+### 🔹 Solution 5 – Customer Retention Rate
 ```dax
 
 Customer Retention Rate = 
@@ -169,7 +169,7 @@ DIVIDE(CALCULATE(
 
 
 ```
-🔹 Solution 6 – Sales Contribution per Product Category (%)
+### 🔹 Solution 6 – Sales Contribution per Product Category (%)
 
 ```dax
 Category Sales Contribution (%) = 
