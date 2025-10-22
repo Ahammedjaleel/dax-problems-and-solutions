@@ -12,49 +12,71 @@ The file includes:
 - **Clean question prompts** for practicing without peeking at answers
 
 ---
+## ✨ Key Learnings
+
+Use of VAR to improve readability and performance
+
+Application of context transitions (e.g., CALCULATE, FILTER)
+
+Aggregation techniques: SUM, AVERAGEX, DISTINCTCOUNT
+
+Time intelligence: SAMEPERIODLASTYEAR
+
+Logical grouping with SWITCH(TRUE())
+
+Dynamic percentage contribution calculations
 
 ##  Problem Descriptions
 
 > The dataset contains the following tables:  
 > `Sales`, `Dates`, `Customer`, `Country`, `Product`, `Product Subcategory`, `Product Category`.
 
-### 💡 Problem 1: What is the Average Sales per Customer?
+##  Data Model
+<img width="800" height="672" alt="image" src="https://github.com/user-attachments/assets/95ef7089-0525-46d8-80af-85ea68020f38" />
+
+
+###  Problem 1: What is the Average Sales per Customer?
 
 We want to understand how much each customer spends on average. This metric helps evaluate customer value and guides marketing and retention strategies.
 
 ---
 
-### 💡 Problem 2: How to Calculate Year-over-Year Sales Growth for Each Product Category?
+###  Problem 2: How to Calculate Year-over-Year Sales Growth for Each Product Category?
 
 This question aims to analyze sales growth trends over time. Year-over-Year (YoY) growth helps us assess business performance and seasonality for each category.
 
 ---
 
-### 💡 Problem 3: What is the Average Number of Days it Takes to Ship Orders per Product Category?
+###  Problem 3: What is the Average Number of Days it Takes to Ship Orders per Product Category?
 
 Shipping efficiency is a key performance indicator. This problem calculates the average delivery time for each product category to help spot fulfillment delays or logistics issues.
 
 ---
 
-### 💡 Problem 4: How Can We Categorize Customers into Segments Based on Total Sales?
+###  Problem 4: How Can We Categorize Customers into Segments Based on Total Sales?
 
 Customer segmentation is crucial for targeting and personalization. In this scenario, we classify customers into **Low**, **Medium**, or **High** value based on their total purchases.
 
 ---
 
-### 💡 Problem 5: How Can We Calculate Customer Retention Rate Based on Repeat Purchases?
+###  Problem 5: How Can We Calculate Customer Retention Rate Based on Repeat Purchases?
 
 Retention rate is a key customer success metric. This measure helps identify how many customers made more than one purchase, which indicates brand loyalty or satisfaction.
 
 ---
 
-### 💡 Problem 6: How to Calculate Each Product Category’s Sales Contribution Relative to Total Sales?
+###  Problem 6: How to Calculate Each Product Category’s Sales Contribution Relative to Total Sales?
 
 This KPI shows how much each category contributes to total revenue. It helps in identifying key drivers and underperformers within the product portfolio.
 
 ---
 
-## 📂 File Structure
+## Output Screenshots
+<img width="1260" height="717" alt="image" src="https://github.com/user-attachments/assets/7c5ca8f3-e09f-4f79-a866-15823708be23" />
+
+<img width="771" height="681" alt="image" src="https://github.com/user-attachments/assets/b507e2eb-139f-4a42-bea9-5c342ca0bfc7" />
+
+
 
 ##  How to Use
 
@@ -85,32 +107,77 @@ RETURN
     IF(CustomerCount > 0, TotalSales / CustomerCount, BLANK())
 
 ```
+🔹 Solution 2 – Year-over-Year Sales Growth (%)
 ```dax
+
+YoY Sales Growth (%) = 
+VAR CurrentYearSales =
+    SUM ( Sales[SalesAmount] )
+VAR LastYearSales =
+    CALCULATE (
+        SUM ( Sales[SalesAmount] ),
+        SAMEPERIODLASTYEAR ( 'Date'[FullDateAlternateKey] )
+    )
+RETURN
+    DIVIDE ( CurrentYearSales - LastYearSales, LastYearSales, 0 )
+
+
+```
+🔹 Solution 3 – Average Days to Ship
+```dax
+Average Days to Ship = 
+VAR DaystoShip = 
+DATEDIFF(MIN(Sales[OrderDate]),MIN(Sales[ShipDate]), DAY)
+Return
+
+AVERAGEX(
+    Sales,
+   DaystoShip
+)
 
 
 
 ```
-
+🔹 Solution 4 – Customer Segmentation by Sales
 ```dax
+Customer Segment = 
+SWITCH(
+    TRUE(),
+    [Total Sale] < 500, "Low Value",
+    [Total Sale] >= 500 && [Total Sale] < 25000, "Medium Value",
+    [Total Sale] >= 25000, "High Value",
+    "Uncategorized"
+)
+
+
+```
+🔹 Solution 5 – Customer Retention Rate
+```dax
+
+Customer Retention Rate = 
+DIVIDE(CALCULATE(
+    DISTINCTCOUNT(Sales[CustomerKey]),
+    FILTER(
+        Sales,
+        COUNTROWS(
+            FILTER(Sales, Sales[CustomerKey] = EARLIER(Sales[CustomerKey]))
+        ) > 1
+    )
+)
+,DISTINCTCOUNT(Sales[CustomerKey]),0)
 
 
 
 ```
+🔹 Solution 6 – Sales Contribution per Product Category (%)
 
 ```dax
-
-
-```
-
-```dax
-
-
-
-
-```
-
-
-```dax
+Category Sales Contribution (%) = 
+DIVIDE(
+    SUM(Sales[SalesAmount]),
+    CALCULATE(SUM(Sales[SalesAmount]), ALL('Product Subcategory'[ProductSubcategory])),
+    0
+) 
 
 
 ```
