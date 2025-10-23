@@ -153,10 +153,25 @@ It’s useful when your data doesn't have a time component but still follows a l
 - Identify products with consistently high demand by analyzing repeat sales across the last 3 weeks using Power BI and DAX.
 
   
-----
 
 
+---
+[❓**08 - Exam-pass-count-analysis**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/08-exam-pass-count-analysis)
 
+- Analyze the total number of subjects each student has passed, with dynamic behavior based on filters — such as whether a single subject or all subjects are selected — using DAX in Power BI.
+
+---
+  [❓**09 - Top N Product Sales Analysis**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/09-topn-products-sales-dax)
+
+- This project demonstrates how to identify the Top 1 and Top 10 best-selling products using DAX in Power BI. The approach includes solutions using both calculated columns and measures, with step-by-step DAX explanations.
+
+The goal is to understand how to use TOPN, SUMMARIZE, and CONCATENATEX to dynamically extract and display top-performing products based on total sales.
+
+---
+ [❓**10-Customer-insights-lab**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/10-customer-insights-lab)
+
+- 10 Customer-Product Insight is a Power BI file with 6 real-world DAX problems and solutions focused on customer and product analysis. It covers sales metrics, growth, shipping, segmentation, retention, and sales contribution, helping you improve DAX skills with clear explanations and examples.
+---
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahammed-jaleel-33772b5b/)
 [![YouTube](https://img.shields.io/badge/youtube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@mobsanalytics)
 [![Instagram](https://img.shields.io/badge/instagram-C13584?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/mobsanalytics/)
