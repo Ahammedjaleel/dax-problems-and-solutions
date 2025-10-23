@@ -1,6 +1,6 @@
 # 10-Customer-Product Insight
 
-This repository contains a Power BI file (`DAX_Challenge_Solutions.pbix`) designed to help you **practice real-world DAX problems** and improve your analytical thinking in Power BI.
+This repository contains a Power BI file (`10-customer-insights-lab-25-30 Question_ANSWER_Explanation_.pbix`) designed to help you **practice real-world DAX problems** and improve your analytical thinking in Power BI.
 
 The file includes:
 
