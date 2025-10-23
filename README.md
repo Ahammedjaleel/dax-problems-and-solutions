@@ -170,7 +170,7 @@ The goal is to understand how to use TOPN, SUMMARIZE, and CONCATENATEX to dynami
 ---
  [❓**10-Customer-insights-lab**](https://github.com/Ahammedjaleel/dax-problems-and-solutions/tree/main/10-customer-insights-lab)
 
-- 10 Customer-Product Insight is a Power BI file with 6 real-world DAX problems and solutions focused on customer and product analysis. It covers sales metrics, growth, shipping, segmentation, retention, and sales contribution, helping you improve DAX skills with clear explanations and examples.
+- 6 real-world DAX problems and solutions focused on customer and product analysis. It covers **sales metrics, growth, shipping, segmentation, retention, and sales contribution,** helping you improve DAX skills with clear explanations and examples.
 ---
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahammed-jaleel-33772b5b/)
 [![YouTube](https://img.shields.io/badge/youtube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@mobsanalytics)
